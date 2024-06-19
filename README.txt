@@ -1,6 +1,11 @@
 skynari
 =======
 
-An API that wraps around Hypixel's SkyBlock API, but has much better endpoints
-because this isn't developed by the admins which means it has the opportunity
-to be good.
+An API that wraps around Hypixel's API, providing useful endpoints for various
+needs. Originally intended for use exclusively with the FreshSky mod, I noticed
+it would be convenient to provide these endpoints for anyone wishing to use
+them. The primary goal is to be more convenient and useful than the official
+APIs provided by Hypixel.
+
+Source: https://github.com/orvitpng/skynari
+Documentation: soon™

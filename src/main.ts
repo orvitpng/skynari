@@ -1,3 +1,5 @@
+export * as api from "./api/mod.ts";
+
 import { walk } from "@std/fs";
 import { Router } from "@oak/acorn";
 
