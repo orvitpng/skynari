@@ -1,0 +1,33 @@
+name: Build and push the Docker image
+
+on: [push, pull_request]
+
+env:
+    REGISTRY: ghcr.io
+    REPOSITORY: ${{ github.repository }}
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        permissions:
+            packages: write
+        steps:
+            - name: Checkout the repository
+              uses: actions/checkout@v4
+            - name: Login to the GitHub Container Registry
+              uses: docker/login-action@v3
+              with:
+                  registry: ${{ env.REGISTRY }}
+                  username: ${{ github.actor }}
+                  password: ${{ secrets.GITHUB_TOKEN }}
+            - name: Build and push the Docker image
+              uses: docker/build-push-action@v6
+              with:
+                  context: .
+                  push: true
+                  tags: ${{ env.REGISTRY }}/${{ env.REPOSITORY }}:${{ github.sha }}
+            - name: Tag as latest if on master
+              if: github.ref == 'refs/heads/master'
+              run: |
+                  docker tag ${{ env.REGISTRY }}/${{ env.REPOSITORY }}:${{ github.sha }} ${{ env.REGISTRY }}/${{ env.REPOSITORY }}:latest
+                  docker push ${{ env.REGISTRY }}/${{ env.REPOSITORY }}:latest
