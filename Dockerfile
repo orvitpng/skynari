@@ -1,10 +1,15 @@
-FROM denoland/deno:alpine
+FROM ghcr.io/gleam-lang/gleam:v1.2.1-erlang-alpine
 
-EXPOSE 8080
+COPY . /build/
+RUN cd /build \
+    && gleam export erlang-shipment \
+    && mv build/erlang-shipment /app \
+    && rm -r /build
 
 WORKDIR /app
-ADD . /app
+ADD ./README.txt /app/README.txt
 
-RUN deno cache ./src/main.ts
+ENTRYPOINT ["/app/entrypoint.sh"]
+CMD ["run"]
 
-CMD [ "task", "run" ]
+EXPOSE 8080
