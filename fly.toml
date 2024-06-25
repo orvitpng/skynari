@@ -1,5 +1,5 @@
 app = 'skynari-api'
-primary_region = 'dfw'
+primary_region = 'iad'
 
 [build]
 

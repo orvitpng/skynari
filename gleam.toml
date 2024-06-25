@@ -6,9 +6,9 @@ links = [{ title = "Website", href = "https://api.skynari.com" }]
 version = "0.1.0"
 
 [dependencies]
+dot_env = ">= 1.0.0 and < 2.0.0"
 gleam_stdlib = ">= 0.38.0 and < 1.0.0"
 gleam_erlang = ">= 0.25.0 and < 1.0.0"
 mist = ">= 1.2.0 and < 2.0.0"
 radish = ">= 0.15.0 and < 1.0.0"
-simplifile = ">= 2.0.0 and < 3.0.0"
 wisp = ">= 0.15.0 and < 1.0.0"

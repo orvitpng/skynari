@@ -7,7 +7,6 @@ RUN cd /build \
     && rm -r /build
 
 WORKDIR /app
-ADD ./README.txt /app/README.txt
 
 ENTRYPOINT ["/app/entrypoint.sh"]
 CMD ["run"]

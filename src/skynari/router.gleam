@@ -1,15 +1,11 @@
 import skynari/routes/v1
-import skynari/web
+import skynari/web.{middleware}
 import wisp
 
-pub fn handle(req: wisp.Request, ctx: web.Context) -> wisp.Response {
-  use req <- web.middleware(req)
+pub fn handle(req: wisp.Request) -> wisp.Response {
+  use req <- middleware(req)
 
   case wisp.path_segments(req) {
-    [] ->
-      wisp.ok()
-      |> wisp.string_body(ctx.readme)
-
     ["v1", "hello"] -> v1.hello()
 
     _ -> wisp.not_found()

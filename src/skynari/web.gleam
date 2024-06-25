@@ -9,7 +9,3 @@ pub fn middleware(
 
   handle(req)
 }
-
-pub type Context {
-  Context(readme: String)
-}
