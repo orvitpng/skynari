@@ -17,6 +17,8 @@ packages = [
   { name = "logging", version = "1.2.0", build_tools = ["gleam"], requirements = ["gleam_stdlib"], otp_app = "logging", source = "hex", outer_checksum = "FCB111401BDB4703A440A94FF8CC7DA521112269C065F219C2766998333E7738" },
   { name = "marceau", version = "1.2.0", build_tools = ["gleam"], requirements = [], otp_app = "marceau", source = "hex", outer_checksum = "5188D643C181EE350D8A20A3BDBD63AF7B6C505DE333CFBE05EF642ADD88A59B" },
   { name = "mist", version = "1.2.0", build_tools = ["gleam"], requirements = ["birl", "gleam_erlang", "gleam_http", "gleam_otp", "gleam_stdlib", "glisten", "gramps", "hpack_erl", "logging"], otp_app = "mist", source = "hex", outer_checksum = "109B4D64E68C104CC23BB3CC5441ECD479DD7444889DA01113B75C6AF0F0E17B" },
+  { name = "mug", version = "1.0.0", build_tools = ["gleam"], requirements = ["gleam_erlang", "gleam_stdlib"], otp_app = "mug", source = "hex", outer_checksum = "43DD17415C8E3DF403A1BD48AEFA81A80EA0BD54311B1CD16C4EFF1D3B4D4419" },
+  { name = "radish", version = "0.15.0", build_tools = ["gleam"], requirements = ["gleam_erlang", "gleam_otp", "gleam_stdlib", "mug"], otp_app = "radish", source = "hex", outer_checksum = "57A18EAFA32D792669823F5C8B7514FDFBF143A2ACF514EE3BD6D54DCC893D1B" },
   { name = "ranger", version = "1.2.0", build_tools = ["gleam"], requirements = ["gleam_stdlib"], otp_app = "ranger", source = "hex", outer_checksum = "1566C272B1D141B3BBA38B25CB761EF56E312E79EC0E2DFD4D3C19FB0CC1F98C" },
   { name = "simplifile", version = "2.0.0", build_tools = ["gleam"], requirements = ["filepath", "gleam_stdlib"], otp_app = "simplifile", source = "hex", outer_checksum = "95219227A43FCFE62C6E494F413A1D56FF953B68FE420698612E3D89A1EFE029" },
   { name = "thoas", version = "1.2.1", build_tools = ["rebar3"], requirements = [], otp_app = "thoas", source = "hex", outer_checksum = "E38697EDFFD6E91BD12CEA41B155115282630075C2A727E7A6B2947F5408B86A" },
@@ -27,5 +29,6 @@ packages = [
 gleam_erlang = { version = ">= 0.25.0 and < 1.0.0" }
 gleam_stdlib = { version = ">= 0.38.0 and < 1.0.0" }
 mist = { version = ">= 1.2.0 and < 2.0.0" }
+radish = { version = ">= 0.15.0 and < 1.0.0" }
 simplifile = { version = ">= 2.0.0 and < 3.0.0" }
 wisp = { version = ">= 0.15.0 and < 1.0.0" }
