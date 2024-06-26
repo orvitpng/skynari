@@ -1,6 +1,6 @@
 import wisp
 
-pub fn hello() -> wisp.Response {
+pub fn hello() {
   wisp.ok()
   |> wisp.string_body("Hello, world!")
 }

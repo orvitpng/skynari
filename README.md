@@ -33,9 +33,10 @@ curl https://api.skynari.com/v1/hello
 
 ## 🛠️ Available Endpoints
 
-| Path        | Description               |
-| ----------- | ------------------------- |
-| `/v1/hello` | 👋 Simple "Hello, world!" |
+| Path          | Description                    |
+| ------------- | ------------------------------ |
+| `/v1/hello`   | 👋 Simple "Hello, world!"      |
+| `/redis_test` | ➕ Global incrementor, db test |
 
 ## 🔗 Links
 
